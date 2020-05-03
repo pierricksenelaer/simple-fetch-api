@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">	
+  <title>REST API - Returning a JSON object using the FETCH function</title>
+  <!-- Bootstrap 4 css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="container-fluid">
+  
+  <!-- MASTHEAD -->
+  <div class="row masthead bg-info mb-5" style="height: 100px">
+    <div class="col d-flex justify-content-center align-items-center flex-wrap" style="background: url(REST-API-icon.jpg) no-repeat 50%; background-size: contain"></div>
+    <div class="col d-flex justify-content-center align-items-center flex-wrap" style="background: url(fetch-api.png) no-repeat 50%; background-size: contain">
+    </div>
+    <div class="col d-flex justify-content-center align-items-center flex-wrap" style="background: url(b4.png) no-repeat 50%; background-size: contain">
+    </div>
+  </div>
+</div>
+ 
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <div class="row">
+     <div class="col-md-4">
+        
+        <div class="pwa bg-light p-3 mb-3 text-center">
+          <img class="w-100" src="pwa.png" />
+          <p class="pt-3 mb-0 font-weight-bold">A simple applied example of a (P)WA</p>
+        </div>
+        
+        <div id="user-info" class="user-info">
+          <!-- JSON object to be returned in here -->
+        </div>
+
+        <ul id="cats" class="cats list-unstyled p-0">
+          <!-- JSON object to be returned in here -->
+          <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">thecatapi.com</h5>
+            <p class="card-text">The cats images below are fetched using the API above</p> 
+          </div>
+        </div>
+        </ul>
+
+     </div>
+
+     <div class="col-md-8">
+       <div class="jumbotron" style="padding: 2rem">
+         <h1 class="display-5">(P)WA - (Progressive) Web Application</h1>
+         <p class="lead">How to use <code>fetch api</code> in <code>javascript</code> to retrieve <code>data</code> from a <code>RESTapi endpoint</code>. The response renders using <code>HTML markup</code> coupled with the <code>Bootstrap 4 CSS framework</code> for the styling part - no extras CSS needed!</p> 
+          
+          <hr class="my-4">
+          
+          <p>Note that the codebase is incomplete to make this page a true PWA. This demo page intends to only showcase how to fetch data from RESTApi endpoints using <a href="https://developers.google.com/web/updates/2015/03/introduction-to-fetch" target="blank">fetch api</a> in Javascript. </p> 
+          <p>Scotch.io has a very <a target="blank" href="https://scotch.io/tutorials/the-ultimate-guide-to-progressive-web-applications">handy online guide</a> so have a read and come back with a Pull Request and let's turn this Web App into a Progressive Web App!</p> 
+
+          <hr class="my-4">
+
+          <p>The full codebase is available via GitHub</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">View Code</a>
+          </p>
+
+       </div>
+
+       <h2>Top headlines from TechCrunch right now</h2>
+       <ul id="newsContainer" class="news-container list-unstyled row">
+        <!-- JSON object to be returned in here -->
+       </ul>
+     </div>
+   </div>
+
+</div>
+
+<footer class="container-fluid bg-info">
+  <div class="container">
+    <div class="row">  
+    
+      <div class="col-sm-12">
+        <ul class="list-inline mb-0 d-flex justify-content-center align-items-center" style="min-height: 100px">
+          <li class="list-inline-item">
+            Pierrick Senelaer 
+          </li>
+          <li class="list-inline-item">
+            <a target="blank" href="https://github.com/pierricksenelaer" title="Pierrick Senelaer on Github">
+              <svg style="fill: #000; color: #000" height="30" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+            </a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a target="blank" href="https://www.linkedin.com/in/pierricksenelaer/" title="Pierrick on LinkedIn">
+              <svg style="fill: #000; color: #000""  width="30px" height="30px" class="svg-inline--fa fa-linkedin fa-w-14" aria-hidden="true" data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+            </a>
+          </li>
+
+          <li class="list-inline-item">
+            <a target="blank" href="https://www.twitter.com/pierrickart" title="Pierrick Senelaer on Twitter">
+              <svg style="fill: #000; color: #000""  width="30px" height="30px" class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+</body>
+
+<script type="text/javascript">
+// Helpers function
+function status(resp) {
+  if (resp.status >= 200 && resp.status < 300) {
+    return Promise.resolve(resp)
+  } else {
+    return Promise.reject(new Error(resp.statusText))
+  }
+}
+function json(resp) {
+  return resp.json()
+}
+function createNode(element) {
+  return document.createElement(element);
+}
+function append(parent, el) {
+  return parent.appendChild(el);
+}
+
+//https://app.ipgeolocation.io/
+const ulUsers = document.getElementById('user-info');
+fetch('https://api.ipgeolocation.io/ipgeo?apiKey=0280414d2b584b78948e726531d98a12')
+  .then(status)
+  .then(json)
+  .then(function(data) {
+    
+    console.log('Request succeeded with JSON response', data);
+    
+    let userProfile = data;
+    div = createNode('div');
+    div.innerHTML = `
+        <div class="card mb-4">
+          <div class="card-header d-flex align-items-center justify-content-center flex-wrap">
+            <img class="float-left mr-3" src="${userProfile.country_flag}" />
+             <h5 class="card-title m-0">Hello Visitor</h5>
+          </div>
+          <div class="card-body">
+            <p class="lead">A bit about you... </p>
+            <p>From ${userProfile.city}, surfing using ${userProfile.isp} and not so far from ${userProfile.district} which is nice!</p>
+            <p><small>You've been ipGeolocated using the <a href="https://app.ipgeolocation.io/">IPgeolocation API</a></small></p> 
+          </div>
+        </div>
+      `;
+  
+    append(ulUsers, div);
+
+  }).catch(function(error) {
+    console.log('Request failed', error);
+  });
+
+
+// https://docs.thecatapi.com/
+const ulCats = document.getElementById('cats');
+const urlCats = 'https://api.thecatapi.com/v1/images/search?limit=5&page=100&order=DESC';
+fetch(urlCats)
+.then((resp) => resp.json())
+.then(function(data) {
+  
+  console.log('Request succeeded with JSON response', data)
+  
+  let catsImgs = data;
+  return catsImgs.map(function(catsImg) {
+    let li = createNode('li'),
+    div = createNode('div');
+    div.innerHTML = `
+        <div class="card mb-2">
+          <img class="w-100" src="${catsImg.url}" />
+        </div>
+      `;
+    append(li, div);
+    append(ulCats, li);
+  })
+}).catch(function(error) {
+    console.log('Request failed', error);
+});
+
+
+
+//https://newsapi.org/?ref=apilist.fun
+const divNewsContainer = document.getElementById('newsContainer');
+const urlNews = 'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=c848194bfc6a4714aac39f9a6b49dd2c';
+fetch(urlNews)
+.then((resp) => resp.json())
+.then(function(data) {
+  
+  
+console.log('Request succeeded with JSON response', data.articles)
+
+let urlNewItems = data.articles;
+  
+  return urlNewItems.map(function(urlNewItem) {
+
+    let liCard = createNode('li');
+    liCard.classList.add('col-md-6','mb-4');
+    div = createNode('div');
+    div.innerHTML = `
+    
+    <div class="card">
+      <img class="card-img-top" src="${urlNewItem.urlToImage}" />
+      <div class="card-body">
+        <p class="card-title">
+          <a target="blank" href="${urlNewItem.url}">
+            ${urlNewItem.title}
+          </a>
+        </p>
+        <span class="author d-block w-100 lead">By_ <strong>${urlNewItem.author}</strong> </span>
+        <span class="source">From_ <em>${urlNewItem.source.name}</em> </span>
+      </div>
+    </div>
+    `;
+    
+    append(liCard, div);
+    append(divNewsContainer, liCard);
+
+  })
+}).catch(function(error) {
+    console.log('Request failed', error);
+});
+
+</script>
+
+
+</html>
