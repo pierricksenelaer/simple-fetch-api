@@ -11,3 +11,5 @@ Note that the codebase is incomplete to make this page a true PWA. This demo pag
 Scotch.io has a very  [handy online guide](https://scotch.io/tutorials/the-ultimate-guide-to-progressive-web-applications)  so have a read and come back with a Pull Request and let's turn this Web App into a Progressive Web App!
 
 [DEMO](http://www.pierrick-senelaer.com/dev/PWAs/fetch-api/) 
+
+![The demo page](https://github.com/pierricksenelaer/simple-fetch-api/blob/master/REST_API.png)
