@@ -194,7 +194,7 @@ fetch(urlCats)
 
 //https://newsapi.org
 const divNewsContainer = document.getElementById('newsContainer');
-const urlNews = 'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=c848194bfc6a4714aac39f9a6b49dd2c';
+const urlNews = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=c848194bfc6a4714aac39f9a6b49dd2c';
 fetch(urlNews)
 .then((resp) => resp.json())
 .then(function(data) {
